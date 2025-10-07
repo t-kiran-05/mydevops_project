@@ -8,7 +8,7 @@ import { Logout } from './features/auth/components/Logout';
 import { Protected } from './features/auth/components/Protected';
 import { useAuthCheck } from "./hooks/useAuth/useAuthCheck";
 import { useFetchLoggedInUserDetails } from "./hooks/useAuth/useFetchLoggedInUserDetails";
-import { AddProductPage, AdminOrdersPage, CartPage, CheckoutPage, ForgotPasswordPage, HomePage, LoginPage, OrderSuccessPage, OtpVerificationPage, ProductDetailsPage, ProductUpdatePage, ResetPasswordPage, SignupPage, UserOrdersPage, UserProfilePage, WishlistPage } from './pages';
+import { AddProductPage, AdminOrdersPage, CartPage, CheckoutPage, HomePage, LoginPage, OrderSuccessPage, ProductDetailsPage, ProductUpdatePage, SignupPage, UserOrdersPage, UserProfilePage, WishlistPage } from './pages';
 import { AdminDashboardPage } from './pages/AdminDashboardPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
@@ -28,9 +28,6 @@ function App() {
       <>
         <Route path='/signup' element={<SignupPage/>}/>
         <Route path='/login' element={<LoginPage/>}/>
-        <Route path='/verify-otp' element={<OtpVerificationPage/>}/>
-        <Route path='/forgot-password' element={<ForgotPasswordPage/>}/>
-        <Route path='/reset-password/:userId/:passwordResetToken' element={<ResetPasswordPage/>}/>
         <Route exact path='/logout' element={<Protected><Logout/></Protected>}/>
         <Route exact path='/product-details/:id' element={<Protected><ProductDetailsPage/></Protected>}/>
 

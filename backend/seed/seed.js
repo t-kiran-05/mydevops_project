@@ -12,7 +12,6 @@ const {connectToDB}=require("../database/db")
 const seedData=async()=>{
     try {
         await connectToDB()
-        console.log('Seed [started] please wait..');
         await seedBrand()
         await seedCategory()
         await seedProduct()
@@ -22,10 +21,8 @@ const seedData=async()=>{
         await seedCart()
         await seedReview()
         await seedOrder()
-
-        console.log('Seed completed..');
     } catch (error) {
-        console.log(error);
+        // Handle error silently or log to a file if needed
     }
 }
 

@@ -16,34 +16,18 @@ export const login=async(cred)=>{
         throw error.response.data
     }
 }
-export const verifyOtp=async(cred)=>{
-    try {
-        const res=await axiosi.post("auth/verify-otp",cred)
-        return res.data
-    } catch (error) {
-        throw error.response.data
-    }
-}
-export const resendOtp=async(cred)=>{
-    try {
-        const res=await axiosi.post("auth/resend-otp",cred)
-        return res.data
-    } catch (error) {
-        throw error.response.data
-    }
-}
 export const forgotPassword=async(cred)=>{
     try {
-        const res=await axiosi.post("auth/forgot-password",cred)
-        return res.data
+        // Removed forgot password API call as feature is removed
+        return null
     } catch (error) {
         throw error.response.data
     }
 }
 export const resetPassword=async(cred)=>{
     try {
-        const res=await axiosi.post("auth/reset-password",cred)
-        return res.data
+        // Removed reset password API call as feature is removed
+        return null
     } catch (error) {
         throw error.response.data
     }

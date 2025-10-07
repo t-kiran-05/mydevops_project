@@ -84,8 +84,7 @@ const brands = [
 exports.seedBrand = async () => {
   try {
     await Brand.insertMany(brands);
-    console.log('Brand seeded successfully');
   } catch (error) {
-    console.log(error);
+    // Handle error silently or log to a file if needed
   }
 };

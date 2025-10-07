@@ -26,8 +26,7 @@ const categories = [
 exports.seedCategory = async () => {
   try {
     await Category.insertMany(categories);
-    console.log("Category seeded successfully");
   } catch (error) {
-    console.log(error);
+    // Handle error silently or log to a file if needed
   }
 };

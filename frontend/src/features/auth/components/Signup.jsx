@@ -23,10 +23,7 @@ export const Signup = () => {
 
   // handles user redirection
   useEffect(()=>{
-    if(loggedInUser && !loggedInUser?.isVerified){
-      navigate("/verify-otp")
-    }
-    else if(loggedInUser){
+    if(loggedInUser){
       navigate("/")
     }
   },[loggedInUser])
@@ -39,10 +36,10 @@ export const Signup = () => {
     }
   },[error])
 
-  
+
   useEffect(()=>{
     if(status==='fullfilled'){
-      toast.success("Welcome! Verify your email to start shopping on mern-ecommerce.")
+      toast.success("Welcome! Signup successful.")
       reset()
     }
     return ()=>{
@@ -110,12 +107,8 @@ export const Signup = () => {
                       <LoadingButton sx={{height:'2.5rem'}} fullWidth loading={status==='pending'} type='submit' variant='contained'>Signup</LoadingButton>
                     </motion.div>
 
-                    <Stack flexDirection={'row'} justifyContent={'space-between'} alignItems={'center'} flexWrap={'wrap-reverse'}>
+                    <Stack flexDirection={'row'} justifyContent={'flex-end'} alignItems={'center'} flexWrap={'wrap-reverse'}>
                         <MotionConfig whileHover={{x:2}} whileTap={{scale:1.050}}>
-                            <motion.div>
-                                <Typography mr={'1.5rem'} sx={{textDecoration:"none",color:"text.primary"}} to={'/forgot-password'} component={Link}>Forgot password</Typography>
-                            </motion.div>
-
                             <motion.div>
                                 <Typography sx={{textDecoration:"none",color:"text.primary"}} to={'/login'} component={Link}>Already a member? <span style={{color:theme.palette.primary.dark}}>Login</span></Typography>
                             </motion.div>

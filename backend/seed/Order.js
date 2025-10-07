@@ -286,8 +286,7 @@ const orders = [
 exports.seedOrder = async () => {
   try {
     await Order.insertMany(orders);
-    console.log("Order seeded successfully");
   } catch (error) {
-    console.log(error);
+    // Handle error silently or log to a file if needed
   }
 };

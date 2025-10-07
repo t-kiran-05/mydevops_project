@@ -23,11 +23,8 @@ export const Login = () => {
   
   // handles user redirection
   useEffect(()=>{
-    if(loggedInUser && loggedInUser?.isVerified){
+    if(loggedInUser){
       navigate("/")
-    }
-    else if(loggedInUser && !loggedInUser?.isVerified){
-      navigate("/verify-otp")
     }
   },[loggedInUser])
 
@@ -40,7 +37,7 @@ export const Login = () => {
 
   // handles login status and dispatches reset actions to relevant states in cleanup
   useEffect(()=>{
-    if(status==='fullfilled' && loggedInUser?.isVerified===true){
+    if(status==='fullfilled'){
       toast.success(`Login successful`)
       reset()
     }
@@ -95,13 +92,9 @@ export const Login = () => {
                       <LoadingButton fullWidth  sx={{height:'2.5rem'}} loading={status==='pending'} type='submit' variant='contained'>Login</LoadingButton>
                     </motion.div>
 
-                    <Stack flexDirection={'row'} justifyContent={'space-between'} alignItems={'center'} flexWrap={'wrap-reverse'} >
+                    <Stack flexDirection={'row'} justifyContent={'flex-end'} alignItems={'center'} flexWrap={'wrap-reverse'} >
 
                       <MotionConfig whileHover={{x:2}} whileTap={{scale:1.050}}>
-                          <motion.div>
-                              <Typography mr={'1.5rem'} sx={{textDecoration:"none",color:"text.primary"}} to={'/forgot-password'} component={Link}>Forgot password</Typography>
-                          </motion.div>
-
                           <motion.div>
                             <Typography sx={{textDecoration:"none",color:"text.primary"}} to={'/signup'} component={Link}>Don't have an account? <span style={{color:theme.palette.primary.dark}}>Register</span></Typography>
                           </motion.div>

@@ -1,0 +1,15 @@
+- [x] Backend: Remove PasswordResetToken require from Auth.js
+- [x] Backend: Remove forgotPassword and resetPassword functions from Auth.js
+- [x] Backend: Remove /forgot-password and /reset-password routes from routes/Auth.js
+- [x] Frontend: Remove forgotPasswordAsync and resetPasswordAsync from AuthSlice.jsx
+- [x] Frontend: Remove related states in AuthSlice.jsx (forgotPasswordStatus, etc.)
+- [x] Frontend: Remove related reducers in AuthSlice.jsx
+- [x] Frontend: Remove extraReducers for forgotPasswordAsync and resetPasswordAsync in AuthSlice.jsx
+- [x] Frontend: Remove related selectors in AuthSlice.jsx
+- [x] Frontend: Remove forgotPassword and resetPassword from AuthApi.jsx
+- [x] Frontend: Delete ResetPassword.jsx component
+- [x] Frontend: Remove ResetPasswordPage import from App.js
+- [x] Frontend: Remove 'Forgot password' links from Login.jsx and Signup.jsx
+- [x] Frontend: Remove /verify-otp navigates from Login.jsx and Signup.jsx
+- [x] Frontend: Simplify redirection logic in Login.jsx and Signup.jsx (remove isVerified checks)
+- [x] Frontend: Update signup success toast in Signup.jsx

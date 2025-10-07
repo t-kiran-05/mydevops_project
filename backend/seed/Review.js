@@ -339,8 +339,7 @@ const reviews = [
 exports.seedReview = async () => {
   try {
     await Review.insertMany(reviews);
-    console.log("Review seeded successfully");
   } catch (error) {
-    console.log(error);
+    // Handle error silently or log to a file if needed
   }
 };
