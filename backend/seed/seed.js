@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const {seedBrand}=require("./Brand")
 const {seedCategory}=require("./Category")
 const {seedProduct}=require("./Product")
