@@ -47,6 +47,7 @@
 //     res.status(200).json({message:'running'})
 // })
 
+
 // server.get('*', (req, res) => {
 //   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 // });
@@ -130,3 +131,4 @@ const PORT = process.env.PORT || 8000;
 server.listen(PORT, "0.0.0.0", () => {
   console.log(`✅ Server started on port ${PORT}`);
 });
+
